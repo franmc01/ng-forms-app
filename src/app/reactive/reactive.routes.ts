@@ -1,7 +1,7 @@
-import { Routes } from "@angular/router";
-import { BasicForm } from "./pages/basic-form/basic-form";
-import { ReactiveForm } from "./pages/reactive-form/reactive-form";
-import { SwitchForm } from "./pages/switch-form/switch-form";
+import { Routes } from '@angular/router';
+import { BasicForm } from './pages/basic-form/basic-form';
+import { ReactiveForm } from './pages/reactive-form/reactive-form';
+import { SwitchForm } from './pages/switch-form/switch-form';
 
 export const reactiveRoutes: Routes = [
   {
@@ -10,22 +10,22 @@ export const reactiveRoutes: Routes = [
       {
         path: 'basic',
         title: 'Basicos',
-        component: BasicForm
+        component: BasicForm,
       },
       {
         path: 'dynamic',
         title: 'Dinamicos',
-        component: ReactiveForm
+        component: ReactiveForm,
       },
       {
         path: 'switches',
         title: 'Switches',
-        component: SwitchForm
-      }
-    ]
+        component: SwitchForm,
+      },
+      {
+        path: '**',
+        redirectTo: 'basic',
+      },
+    ],
   },
-  {
-    path: '**',
-    redirectTo: 'basic'
-  }
-]
+];
